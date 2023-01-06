@@ -22,7 +22,7 @@ The R code to conduct k-means clustering and compute clustering accuracy on 20 r
 
 ### 5. data process DE.R
 
-The R code to simulate data with ground-truth DE genes from real datasets.It conduct DE gene analysis and compute performance before and after imputation.
+The R code to simulate data with ground-truth DE genes from real datasets.It conducts DE gene analysis and computes performance before and after imputation.
 
 ### 6. overall imputation accuracy compare.R
 
@@ -30,7 +30,7 @@ The R code to compute RNMSE and correlation of masking values between original a
 
 ### 7. depth and width.py
 
-The Python code to train autoencoders with different depth and width. The trained model will impute the dataset. The training and imputation are implemented by Pytorch deep learning library.
+The Python code to train autoencoders with different depths and widths. The trained model will impute the dataset. The training and imputation are implemented by Pytorch deep learning library.
 
 ### 8. activation function.py
 
