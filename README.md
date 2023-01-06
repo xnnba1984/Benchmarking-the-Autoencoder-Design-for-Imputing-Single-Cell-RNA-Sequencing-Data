@@ -1,6 +1,6 @@
 # Benchmarking-the-Autoencoder-Design-for-Imputing-Single-Cell-RNA-Sequencing-Data
 
-This repository contains the R and Python code to create the result in the paper 'Benchmarking the Autoencoder Design for Imputing Single-Cell RNA Sequencing Data'.
+This repository contains the R and Python code to create the result in the paper 'Benchmarking the Autoencoder Design for Imputing Single-Cell RNA Sequencing Data'. The data used in this study is available at [Zenodo repository](https://zenodo.org/record/7504311#.Y7ei0naZMuK).
 
 ## Code Structure
 
