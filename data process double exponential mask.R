@@ -19,6 +19,7 @@ cell.name <- colnames(data.seurat)
 
 # get counts on hvg 
 data.variable <- data[gene.variable, cell.name]; dim(data.variable); data.variable[1:10, 1:10]
+data.variable <- log(data.variable+1)
 
 # zero rate after mask 50% non-zero element
 rate.zero <- (sum(data.variable==0) + sum(data.variable!=0) * 0.5) / 
@@ -27,7 +28,7 @@ rate.zero <- (sum(data.variable==0) + sum(data.variable!=0) * 0.5) /
 # solve lambda in double exponential
 f <- function(lambda){
   data.addzero <- apply(data.variable, 1, FUN = function(x){
-    index.zero <- rbinom(length(x), size = 1, prob = exp(-lambda*log(mean(x[x > 0]))^2))
+    index.zero <- rbinom(length(x), size = 1, prob = exp(-lambda*(mean(x[x > 0]))^2))
     return(x * (1-index.zero))
   })
   return(sum(data.addzero == 0) / (dim(data.addzero)[1] * dim(data.addzero)[2]) - rate.zero)
