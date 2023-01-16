@@ -40,7 +40,7 @@ system.time({
 
 # mask data by probability and lambda
 mask <- apply(data.variable, 1, FUN = function(x){
-  return(rbinom(length(x), size = 1, prob = exp(-lambda*log(mean(x[x > 0]))^2)))
+  return(rbinom(length(x), size = 1, prob = exp(-lambda*(mean(x[x > 0]))^2)))
 }); dim(mask)
 mask <- t(mask); dim(mask)
 mask <- (data.variable * mask) > 0; dim(mask)
